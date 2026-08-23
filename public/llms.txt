@@ -1,0 +1,15 @@
+# brightplace Operator Pages
+> Apartment community pages with all-in pricing, floor plans, amenities, and neighborhood data. Every price includes required monthly fees — no hidden costs.
+
+## Air Communities
+- [Oak Trail at Cherry Creek South](/air-communities/oak-trail): Modern Denver apartments near Cherry Creek State Park. 7 floor plans from $1,512/mo all-in. Two resort pools, 24hr fitness, dog park. 2234 S Trenton Way, Denver CO 80231.
+
+## Towne Properties
+- [Harpers Point](/towne-properties/harpers-point): Resort-style Cincinnati apartments with white sand beach, full-service pub, and award-winning landscaping. 9 floor plans from $1,285/mo. 8713 Harperpoint Drive, Cincinnati OH 45249.
+
+## About brightplace
+brightplace provides transparent apartment information with all-in pricing. No hidden fees. Every price includes required monthly costs like water, sewer, trash, and pest control. Utilities you control (electricity, internet) are billed separately by your provider.
+
+## Contact
+Website: https://brightplace.ai
+Operator pages: https://operator.brightplace.ai

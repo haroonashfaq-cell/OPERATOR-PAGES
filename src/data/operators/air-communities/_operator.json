@@ -1,0 +1,9 @@
+{
+  "slug": "air-communities",
+  "name": "AIR Communities",
+  "description": "AIR Communities is a real estate investment trust focused on the ownership and management of quality apartment communities across the United States.",
+  "headquarters": "4582 S. Ulster St. Suite 1700, Denver, CO 80237",
+  "website": "https://www.aircommunities.com",
+  "totalProperties": 170,
+  "markets": ["Denver", "Philadelphia", "Miami", "San Diego", "Boston", "Los Angeles", "Las Vegas", "Atlanta", "Raleigh", "Jacksonville", "Washington D.C."]
+}

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { getOperator, getAllOperatorSlugs } from '@/data/operators'
+import { getProperty, getAllOperatorPropertyPairs, getOperatorMeta } from '@/data/operators'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import RentCalculator from '@/components/RentCalculator'
@@ -14,16 +14,16 @@ import Footer from '@/components/Footer'
 import AIAssistant from '@/components/AIAssistant'
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ operator: string; slug: string }>
 }
 
 export async function generateStaticParams() {
-  return getAllOperatorSlugs().map((slug) => ({ slug }))
+  return getAllOperatorPropertyPairs().map(({ operator, slug }) => ({ operator, slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
-  const data = getOperator(slug)
+  const { operator, slug } = await params
+  const data = getProperty(operator, slug)
   if (!data) return { title: 'Not Found' }
 
   return {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: data.metaTitle,
       description: data.metaDescription,
       type: 'website',
-      url: `https://operator.brightplace.ai/air-communities/${slug}`,
+      url: `https://operator.brightplace.ai/${operator}/${slug}`,
       images: [{ url: data.heroImage, width: 1200, height: 630, alt: data.heroAlt }],
       siteName: 'brightplace',
     },
@@ -44,18 +44,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [data.heroImage],
     },
     alternates: {
-      canonical: `https://operator.brightplace.ai/air-communities/${slug}`,
+      canonical: `https://operator.brightplace.ai/${operator}/${slug}`,
     },
     robots: { index: true, follow: true },
   }
 }
 
-export default async function OperatorPropertyPage({ params }: PageProps) {
-  const { slug } = await params
-  const data = getOperator(slug)
-  if (!data) notFound()
+export default async function PropertyPage({ params }: PageProps) {
+  const { operator, slug } = await params
+  const data = getProperty(operator, slug)
+  const operatorMeta = getOperatorMeta(operator)
+  if (!data || !operatorMeta) notFound()
 
-  // JSON-LD structured data for SEO + AI scraping
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ApartmentComplex',
@@ -72,7 +72,7 @@ export default async function OperatorPropertyPage({ params }: PageProps) {
     telephone: data.phone,
     email: data.email,
     image: data.heroImage,
-    url: `https://operator.brightplace.ai/air-communities/${slug}`,
+    url: `https://operator.brightplace.ai/${operator}/${slug}`,
     amenityFeature: data.amenities.map((a) => ({
       '@type': 'LocationFeatureSpecification',
       name: a.title,
@@ -94,10 +94,7 @@ export default async function OperatorPropertyPage({ params }: PageProps) {
     mainEntity: data.faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
     })),
   }
 
@@ -106,27 +103,17 @@ export default async function OperatorPropertyPage({ params }: PageProps) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'brightplace', item: 'https://brightplace.ai' },
-      { '@type': 'ListItem', position: 2, name: 'Air Communities', item: 'https://operator.brightplace.ai/air-communities' },
-      { '@type': 'ListItem', position: 3, name: `${data.name} ${data.subtitle}`, item: `https://operator.brightplace.ai/air-communities/${slug}` },
+      { '@type': 'ListItem', position: 2, name: operatorMeta.name, item: `https://operator.brightplace.ai/${operator}` },
+      { '@type': 'ListItem', position: 3, name: `${data.name} ${data.subtitle}`, item: `https://operator.brightplace.ai/${operator}/${slug}` },
     ],
   }
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      {/* All content is server-rendered in the HTML for AI/SEO scraping */}
       <Header data={data} />
       <main>
         <Hero data={data} />

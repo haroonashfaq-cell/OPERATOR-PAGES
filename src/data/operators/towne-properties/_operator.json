@@ -1,0 +1,12 @@
+{
+  "slug": "towne-properties",
+  "name": "Towne Properties",
+  "tagline": "Great Places to Live, Work, Shop & Play",
+  "description": "Towne Properties is a premier integrated real estate company with over 60 years of experience in property development, management, and investments, serving communities across Ohio, Indiana, Kentucky, and North Carolina.",
+  "headquarters": "1055 Saint Paul Place, Cincinnati, OH 45202",
+  "phone": "(513) 381-8696",
+  "website": "https://www.towneproperties.com",
+  "totalProperties": 119,
+  "markets": ["Cincinnati", "Columbus", "Dayton", "Indianapolis", "Covington", "Newport", "Raleigh"],
+  "founded": 1961
+}

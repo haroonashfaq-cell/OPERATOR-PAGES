@@ -1,0 +1,82 @@
+{
+  "slug": "oak-trail",
+  "name": "Oak Trail",
+  "subtitle": "At Cherry Creek South",
+  "address": "2234 S Trenton Way",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80231",
+  "phone": "(303) 555-0192",
+  "email": "leasing@oaktraildenver.com",
+  "heroImage": "/images/air-communities/hero-pool.jpg",
+  "heroAlt": "Resort-style pool with a timber pavilion and lounge seating at Oak Trail apartments",
+  "heroHeadline": "Modern Cherry Creek apartments near downtown Denver",
+  "heroDescription": "One, two, and three bedroom homes with granite counters, in-home laundry, and private balconies. Two resort-style pools, ten minutes from Cherry Creek State Park.",
+  "promoText": "Limited time: up to two months free on select homes",
+  "pricingHeadline": "The price you see is the price you pay",
+  "pricingDescription": "Every price on this site includes the required monthly costs of living here. No surprise line items at lease signing, no fees revealed on move-in day.",
+  "pricingBullets": [
+    "Required fees itemized before you tour, not after you apply",
+    "One honest monthly number to compare against any other community",
+    "Deposits, pet rent, and parking quoted in writing at application"
+  ],
+  "samplePlan": {
+    "name": "Design 2A",
+    "details": "2 bed, 2 bath, 1,048 sq ft. Illustrative example.",
+    "breakdown": [
+      { "label": "Base rent", "value": "$1,715" },
+      { "label": "Water / sewer / trash", "value": "$68" },
+      { "label": "Pest control", "value": "$5" },
+      { "label": "Valet trash", "value": "$35" },
+      { "label": "Package lockers", "value": "$15" }
+    ],
+    "total": "$1,838",
+    "note": "Electricity and internet are billed separately by your provider."
+  },
+  "floorPlans": [
+    { "name": "Design 1A", "tier": "One Bedroom", "beds": 1, "baths": 1, "sqft": 678, "price": 1512, "img": "/images/air-communities/plan-1a.png", "imgAlt": "Floor plan for Design 1A one bedroom apartment" },
+    { "name": "Design 1B", "tier": "One Bedroom", "beds": 1, "baths": 1, "sqft": 753, "price": 1575, "img": "/images/air-communities/plan-1b.png", "imgAlt": "Floor plan for Design 1B one bedroom apartment" },
+    { "name": "Design 2A20", "tier": "Two Bedroom", "beds": 2, "baths": 2, "sqft": 1048, "price": 1715, "img": "/images/air-communities/plan-2a.png", "imgAlt": "Floor plan for Design 2A20 two bedroom apartment", "promo": "2 mo free" },
+    { "name": "Design 2A10", "tier": "Two Bedroom", "beds": 2, "baths": 1, "sqft": 960, "price": 1677, "img": "/images/air-communities/plan-2b.png", "imgAlt": "Floor plan for Design 2A10 two bedroom apartment", "promo": "2 mo free" },
+    { "name": "Design 2B20", "tier": "Two Bedroom", "beds": 2, "baths": 2, "sqft": 1100, "price": 1785, "img": "/images/air-communities/plan-2c.png", "imgAlt": "Floor plan for Design 2B20 two bedroom apartment" },
+    { "name": "Design 2C20", "tier": "Two Bedroom", "beds": 2, "baths": 2, "sqft": 1156, "price": 1914, "img": "/images/air-communities/plan-2c.png", "imgAlt": "Floor plan for Design 2C20 two bedroom apartment" },
+    { "name": "Design 3A", "tier": "Three Bedroom", "beds": 3, "baths": 2, "sqft": 1380, "price": 2422, "img": "/images/air-communities/plan-3a.png", "imgAlt": "Floor plan for Design 3A three bedroom apartment" }
+  ],
+  "amenitiesHeadline": "Everything you need, right at home",
+  "amenitiesDescription": "Community amenities designed for your lifestyle.",
+  "amenities": [
+    { "title": "24-hour fitness center", "description": "With a dedicated yoga studio to support every workout and wellness goal" },
+    { "title": "Two resort-style pools", "description": "Featuring expansive sundecks and convenient grilling areas" },
+    { "title": "On-site dog park", "description": "Designed for carefree, off-leash play" },
+    { "title": "Resident clubhouse", "description": "With a full kitchen, HDTVs, and welcoming lounge spaces to gather and unwind" },
+    { "title": "Business center", "description": "Offering comfortable seating for focused workdays" },
+    { "title": "Outdoor social spaces", "description": "Complete with barbecue areas, a cozy fireplace, and relaxed lounge seating" }
+  ],
+  "amenityImage": "/images/air-communities/fitness.jpg",
+  "amenityImageAlt": "Woman working out in the 24-hour fitness center",
+  "neighborhoodHeadline": "Welcome to the neighborhood",
+  "neighborhoodDescription": "Center yourself where life happens. Enjoy a home 10 minutes away from Cherry Creek State Park, 15 minutes away from Cherry Creek Shopping Center, and the rhythm of a neighborhood right where you want to be.",
+  "neighborhoodImage": "/images/air-communities/denver-skyline.jpg",
+  "neighborhoodImageAlt": "Denver skyline with mountains in the background",
+  "galleryImages": [
+    { "src": "/images/air-communities/hero-pool.jpg", "alt": "Resort-style pool with pavilion", "caption": "Resort-style pool with timber pavilion" },
+    { "src": "/images/air-communities/kitchen.jpg", "alt": "Renovated kitchen with granite countertops", "caption": "Granite countertops and modern finishes" },
+    { "src": "/images/air-communities/living-room.jpg", "alt": "Open living room with fireplace", "caption": "Spacious living areas with natural light" },
+    { "src": "/images/air-communities/dog-park.jpg", "alt": "On-site dog park for off-leash play", "caption": "On-site dog park for off-leash play" },
+    { "src": "/images/air-communities/denver-skyline.jpg", "alt": "Denver skyline view from Cherry Creek", "caption": "Minutes from downtown Denver" }
+  ],
+  "faqs": [
+    { "question": "What is the all-in pricing at Oak Trail?", "answer": "Every listed price includes base rent plus required monthly fees like water, sewer, trash, pest control, valet trash, and package lockers. There are no surprise line items at lease signing." },
+    { "question": "Are pets allowed at Oak Trail?", "answer": "Yes, Oak Trail is a pet-friendly community with an on-site dog park designed for off-leash play. Breed restrictions, pet deposits, and monthly pet rent are quoted in writing at application." },
+    { "question": "What floor plans are available?", "answer": "Oak Trail offers seven floor plans ranging from one-bedroom to three-bedroom layouts, between 678 and 1,380 square feet. Prices start at $1,512 per month all-in." },
+    { "question": "How far is Oak Trail from Cherry Creek State Park?", "answer": "Oak Trail is approximately 10 minutes from Cherry Creek State Park and 15 minutes from the Cherry Creek Shopping Center, placing you near both nature and retail." },
+    { "question": "What amenities does Oak Trail offer?", "answer": "Community amenities include two resort-style swimming pools, a 24-hour fitness center with yoga studio, an on-site dog park, resident clubhouse, business center, and outdoor social spaces with grilling areas." },
+    { "question": "Is there a move-in special?", "answer": "Select floor plans currently offer up to two months free. Contact the leasing office or schedule a tour to learn which plans are eligible for the current promotion." },
+    { "question": "Do apartments include in-unit laundry?", "answer": "Yes, every home at Oak Trail includes an in-home washer and dryer set, along with granite countertops and private balconies or patios." },
+    { "question": "What utilities are included in the rent?", "answer": "Water, sewer, trash, pest control, valet trash, and package lockers are included in the all-in price. Electricity and internet are billed separately by your chosen provider." }
+  ],
+  "tourHeadline": "Your personal tour awaits",
+  "tourDescription": "We are here to provide an exceptional living experience. Schedule your tour and we will customize it to meet your every need.",
+  "metaTitle": "Oak Trail at Cherry Creek South | Modern Denver Apartments | brightplace",
+  "metaDescription": "Explore Oak Trail at Cherry Creek South in Denver. One to three bedroom apartments with all-in pricing, two resort-style pools, and a 24-hour fitness center. Starting at $1,512/mo."
+}
