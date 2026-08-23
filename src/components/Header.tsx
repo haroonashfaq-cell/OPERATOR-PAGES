@@ -19,17 +19,12 @@ export default function Header({ data, operatorSlug, propertySlug }: HeaderProps
     setScrolled(latest > 60)
   })
 
-  const storyUrl = operatorSlug && propertySlug
-    ? `/${operatorSlug}/${propertySlug}-stories`
-    : undefined
-
   const navLinks = [
     { href: '#residences', label: 'Residences' },
     { href: '#amenities', label: 'Amenities' },
     { href: '#neighborhood', label: 'Neighborhood' },
     { href: '#gallery', label: 'Gallery' },
     { href: '#faq', label: 'FAQ' },
-    ...(storyUrl ? [{ href: storyUrl, label: 'Stories' }] : []),
   ]
 
   return (
