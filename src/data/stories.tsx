@@ -62,16 +62,30 @@ export function getStoriesByProperty(operatorSlug: string, propertySlug: string)
   return allStories[operatorSlug]?.filter(s => s.propertySlug === propertySlug) || []
 }
 
-// Stories index: e.g. "oak-trail-stories" slug resolves to a listing page
-export function isStoriesIndex(slug: string): { propertySlug: string } | null {
-  if (slug.endsWith('-stories')) {
+// Stories index: "stories" slug = operator-level listing
+export function isStoriesIndex(slug: string): boolean {
+  return slug === 'stories'
+}
+
+// Property-level stories index: "oak-trail-stories"
+export function isPropertyStoriesIndex(slug: string): { propertySlug: string } | null {
+  if (slug.endsWith('-stories') && slug !== 'stories') {
     return { propertySlug: slug.replace('-stories', '') }
   }
   return null
 }
 
+export function getAllStoriesByOperator(operatorSlug: string): StoryData[] {
+  return allStories[operatorSlug] || []
+}
+
 export function getAllStoriesIndexParams(): { operator: string; slug: string }[] {
   const params: { operator: string; slug: string }[] = []
+  // Operator-level stories pages
+  for (const operator of Object.keys(allStories)) {
+    params.push({ operator, slug: 'stories' })
+  }
+  // Property-level stories pages
   const seenProperties = new Set<string>()
   for (const [operator, stories] of Object.entries(allStories)) {
     for (const story of stories) {

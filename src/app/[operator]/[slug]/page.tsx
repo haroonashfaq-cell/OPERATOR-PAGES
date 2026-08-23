@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getProperty, getAllOperatorPropertyPairs, getOperatorMeta } from '@/data/operators'
-import { getStory, getAllStoryParams, isStoriesIndex, getAllStoriesIndexParams, getStoriesByProperty } from '@/data/stories'
+import { getStory, getAllStoryParams, isStoriesIndex, isPropertyStoriesIndex, getAllStoriesIndexParams, getStoriesByProperty, getAllStoriesByOperator } from '@/data/stories'
+import { getPropertiesByOperator } from '@/data/operators'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import RentCalculator from '@/components/RentCalculator'
@@ -30,14 +31,25 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { operator, slug } = await params
 
-  // Check if it's a stories index
-  const indexMatch = isStoriesIndex(slug)
-  if (indexMatch) {
-    const property = getProperty(operator, indexMatch.propertySlug)
+  // Operator-level stories index
+  if (isStoriesIndex(slug)) {
+    const opMeta = getOperatorMeta(operator)
+    if (opMeta) {
+      return {
+        title: `${opMeta.name} Stories & Guides | brightplace`,
+        description: `Read guides, reviews, and neighborhood insights about ${opMeta.name} communities.`,
+      }
+    }
+  }
+
+  // Property-level stories index
+  const propIndex = isPropertyStoriesIndex(slug)
+  if (propIndex) {
+    const property = getProperty(operator, propIndex.propertySlug)
     if (property) {
       return {
         title: `${property.name} Stories & Guides | brightplace`,
-        description: `Read guides, reviews, and neighborhood insights about ${property.name} ${property.subtitle} in ${property.city}, ${property.state}.`,
+        description: `Read guides and insights about ${property.name} ${property.subtitle} in ${property.city}, ${property.state}.`,
       }
     }
   }
@@ -87,13 +99,99 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function Page({ params }: PageProps) {
   const { operator, slug } = await params
 
-  // Check if it's a stories index
-  const indexMatch = isStoriesIndex(slug)
-  if (indexMatch) {
-    const property = getProperty(operator, indexMatch.propertySlug)
+  // Operator-level stories page: /towne-properties/stories
+  if (isStoriesIndex(slug)) {
+    const operatorMeta = getOperatorMeta(operator)
+    if (!operatorMeta) notFound()
+    const allStories = getAllStoriesByOperator(operator)
+    const properties = getPropertiesByOperator(operator)
+
+    return (
+      <main style={{ minHeight: '100vh', background: 'var(--bg-page)' }}>
+        <div style={{
+          background: 'var(--bp-navy)', color: 'var(--bp-paper)',
+          padding: 'clamp(100px, 14vw, 160px) clamp(20px, 4vw, 48px) clamp(48px, 7vw, 80px)',
+          position: 'relative', overflow: 'hidden',
+        }}>
+          <div style={{ position: 'absolute', top: -100, right: -100, width: 300, height: 300, borderRadius: '50%', border: '1px solid rgba(250,246,239,0.04)', pointerEvents: 'none' }} />
+          <div style={{ maxWidth: 800, margin: '0 auto' }}>
+            <nav style={{ fontFamily: 'var(--ff-body)', fontSize: 13, color: 'rgba(250,246,239,0.45)', marginBottom: 20 }}>
+              <Link href={`/${operator}`} style={{ color: 'var(--bp-orange)' }}>{operatorMeta.name}</Link>
+              <span style={{ margin: '0 6px' }}>/</span>
+              <span style={{ color: 'rgba(250,246,239,0.8)' }}>Stories & Guides</span>
+            </nav>
+            <h1 style={{ fontFamily: 'var(--ff-display)', fontWeight: 600, fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: 1.1, letterSpacing: '-0.03em', margin: '0 0 14px' }}>
+              {operatorMeta.name} Stories
+            </h1>
+            <p style={{ fontFamily: 'var(--ff-body)', fontSize: 17, lineHeight: 1.6, color: 'rgba(250,246,239,0.6)', margin: 0, maxWidth: '48ch' }}>
+              Guides, reviews, and neighborhood insights across all {operatorMeta.name} communities.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: 'clamp(40px, 6vw, 72px) clamp(20px, 4vw, 48px)' }}>
+          {/* Group by property */}
+          {properties.map((prop) => {
+            const propStories = allStories.filter(s => s.propertySlug === prop.slug)
+            if (propStories.length === 0) return null
+            return (
+              <div key={prop.slug} style={{ marginBottom: 48 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: 'var(--r-sm)', background: `url(${prop.heroImage}) center / cover no-repeat`, flexShrink: 0 }} />
+                  <div>
+                    <p style={{ fontFamily: 'var(--ff-display)', fontWeight: 600, fontSize: 16, margin: '0 0 1px', color: 'var(--bp-navy)' }}>{prop.name}</p>
+                    <p style={{ fontFamily: 'var(--ff-body)', fontSize: 12, color: 'var(--bp-ink-muted)', margin: 0 }}>{prop.subtitle} · {prop.city}, {prop.state}</p>
+                  </div>
+                </div>
+                <div style={{ display: 'grid', gap: 16 }}>
+                  {propStories.map((s) => (
+                    <Link key={s.slug} href={`/${operator}/${s.slug}`} style={{
+                      display: 'grid', gridTemplateColumns: '180px 1fr', gap: 20,
+                      padding: 16, borderRadius: 'var(--r-md)',
+                      background: 'var(--bg-surface)', border: '1px solid var(--bp-line)',
+                      textDecoration: 'none', color: 'inherit',
+                      transition: 'box-shadow 0.25s, transform 0.25s', alignItems: 'center',
+                    }} className="two-col-grid">
+                      <div style={{ width: '100%', aspectRatio: '16/10', borderRadius: 6, background: `url(${prop.heroImage}) center / cover no-repeat` }} />
+                      <div>
+                        <p style={{ fontFamily: 'var(--ff-display)', fontWeight: 500, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--bp-teal-deep)', margin: '0 0 5px' }}>Community Guide</p>
+                        <h3 style={{ fontFamily: 'var(--ff-display)', fontWeight: 600, fontSize: 17, letterSpacing: '-0.01em', margin: '0 0 6px', lineHeight: 1.3 }}>{s.title}</h3>
+                        <div style={{ display: 'flex', gap: 10, alignItems: 'center', fontFamily: 'var(--ff-body)', fontSize: 12, color: 'var(--bp-ink-muted)' }}>
+                          <span>{s.readTime} read</span>
+                          <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--bp-line)' }} />
+                          <span>{new Date(s.datePublished).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+
+          <div style={{ marginTop: 32, textAlign: 'center' }}>
+            <Link href={`/${operator}`} style={{ fontFamily: 'var(--ff-display)', fontWeight: 600, fontSize: 14, color: 'var(--bp-teal-deep)' }}>
+              &larr; Back to {operatorMeta.name}
+            </Link>
+          </div>
+        </div>
+
+        <footer style={{ borderTop: '1px solid var(--bp-line)', padding: '24px clamp(20px, 4vw, 48px)', textAlign: 'center' }}>
+          <p style={{ fontFamily: 'var(--ff-body)', fontSize: 13, color: 'var(--bp-ink-muted)', margin: 0 }}>
+            Powered by <Link href="https://brightplace.ai" style={{ color: 'var(--bp-orange)', fontFamily: 'var(--ff-display)', fontWeight: 700 }}>brightplace</Link>
+          </p>
+        </footer>
+      </main>
+    )
+  }
+
+  // Property-level stories index
+  const propIndex = isPropertyStoriesIndex(slug)
+  if (propIndex) {
+    const property = getProperty(operator, propIndex.propertySlug)
     const operatorMeta = getOperatorMeta(operator)
     if (!property || !operatorMeta) notFound()
-    const stories = getStoriesByProperty(operator, indexMatch.propertySlug)
+    const stories = getStoriesByProperty(operator, propIndex.propertySlug)
 
     return (
       <main style={{ minHeight: '100vh', background: 'var(--bg-page)' }}>
@@ -108,7 +206,7 @@ export default async function Page({ params }: PageProps) {
             <nav style={{ fontFamily: 'var(--ff-body)', fontSize: 13, color: 'rgba(250,246,239,0.45)', marginBottom: 20, display: 'flex', alignItems: 'center', gap: 6 }}>
               <Link href={`/${operator}`} style={{ color: 'var(--bp-orange)' }}>{operatorMeta.name}</Link>
               <span>/</span>
-              <Link href={`/${operator}/${indexMatch.propertySlug}`} style={{ color: 'rgba(250,246,239,0.6)' }}>{property.name}</Link>
+              <Link href={`/${operator}/${propIndex.propertySlug}`} style={{ color: 'rgba(250,246,239,0.6)' }}>{property.name}</Link>
               <span>/</span>
               <span style={{ color: 'rgba(250,246,239,0.8)' }}>Stories</span>
             </nav>
@@ -183,7 +281,7 @@ export default async function Page({ params }: PageProps) {
 
           {/* Back to property */}
           <div style={{ marginTop: 40, textAlign: 'center' }}>
-            <Link href={`/${operator}/${indexMatch.propertySlug}`} style={{
+            <Link href={`/${operator}/${propIndex.propertySlug}`} style={{
               fontFamily: 'var(--ff-display)', fontWeight: 600, fontSize: 14,
               color: 'var(--bp-teal-deep)', display: 'inline-flex', alignItems: 'center', gap: 6,
             }}>

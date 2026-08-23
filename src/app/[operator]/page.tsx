@@ -259,7 +259,7 @@ export default async function OperatorPage({ params }: PageProps) {
                   </span>
                 </div>
                 <Link
-                  href={`/${operator}/${prop.slug}-stories`}
+                  href={`/${operator}/stories`}
                   style={{
                     display: 'block', marginTop: 12,
                     fontFamily: 'var(--ff-body)', fontSize: 13,
@@ -267,7 +267,7 @@ export default async function OperatorPage({ params }: PageProps) {
                     padding: '10px 0', borderTop: '1px solid var(--bp-line)',
                   }}
                 >
-                  Read stories about {prop.name}
+                  Read stories &rarr;
                 </Link>
               </div>
             </Link>
