@@ -292,12 +292,12 @@ export default function RentCalculator({ data }: { data: OperatorData }) {
             </div>
           </motion.div>
 
-          {/* Right — Sticky price card */}
+          {/* Right — Sticky price card (sticky on desktop, flows on mobile) */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            style={{ position: 'sticky', top: 100 }}
+            className="price-card-wrapper"
           >
             <div style={{
               background: 'var(--bg-surface)',
