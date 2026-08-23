@@ -296,8 +296,7 @@ section[id] { scroll-margin-top: 80px; }
   .amenity-grid { grid-template-columns: 1fr !important; }
   .two-col-grid { grid-template-columns: 1fr !important; }
   .pricing-grid { grid-template-columns: 1fr !important; }
-  .price-card-wrapper { position: static !important; order: -1; }
-  .mobile-price-bar { display: flex !important; }
+  .price-card-wrapper { position: static !important; }
   .footer-grid { grid-template-columns: 1fr 1fr !important; }
 
   .section-heading { font-size: clamp(28px, 7vw, 40px) !important; }
