@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getProperty, getOperatorMeta } from '@/data/operators'
 import StoryLayout from '@/components/StoryLayout'
+import AIAssistant from '@/components/AIAssistant'
 import Link from 'next/link'
 
 // Story data - in production this would come from markdown files or CMS
@@ -124,6 +125,7 @@ export default async function StoryPage({ params }: PageProps) {
       }}>
         {contentElement}
       </StoryLayout>
+      <AIAssistant data={property} />
     </>
   )
 }

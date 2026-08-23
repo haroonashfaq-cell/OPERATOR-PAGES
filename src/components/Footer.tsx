@@ -114,6 +114,7 @@ export default function Footer({ data }: { data: OperatorData }) {
               { label: 'Neighborhood', href: '#neighborhood' },
               { label: 'Gallery', href: '#gallery' },
               { label: 'FAQ', href: '#faq' },
+              { label: 'Stories', href: '#' },
             ].map((link) => (
               <a
                 key={link.label}

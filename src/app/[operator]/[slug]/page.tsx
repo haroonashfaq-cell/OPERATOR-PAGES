@@ -114,7 +114,7 @@ export default async function PropertyPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <Header data={data} />
+      <Header data={data} operatorSlug={operator} propertySlug={slug} />
       <main>
         <Hero data={data} />
         <RentCalculator data={data} />

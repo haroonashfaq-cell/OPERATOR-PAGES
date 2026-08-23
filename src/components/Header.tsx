@@ -4,7 +4,13 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
 import type { OperatorData } from '@/data/operators'
 
-export default function Header({ data }: { data: OperatorData }) {
+interface HeaderProps {
+  data: OperatorData
+  operatorSlug?: string
+  propertySlug?: string
+}
+
+export default function Header({ data, operatorSlug, propertySlug }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { scrollY } = useScroll()
@@ -13,12 +19,17 @@ export default function Header({ data }: { data: OperatorData }) {
     setScrolled(latest > 60)
   })
 
+  const storyUrl = operatorSlug && propertySlug
+    ? `/${operatorSlug}/${propertySlug}/stories/cherry-creek-apartment-guide`
+    : undefined
+
   const navLinks = [
     { href: '#residences', label: 'Residences' },
     { href: '#amenities', label: 'Amenities' },
     { href: '#neighborhood', label: 'Neighborhood' },
     { href: '#gallery', label: 'Gallery' },
     { href: '#faq', label: 'FAQ' },
+    ...(storyUrl ? [{ href: storyUrl, label: 'Stories' }] : []),
   ]
 
   return (
