@@ -1,7 +1,4 @@
 {
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "outputDirectory": "out",
   "headers": [
     {
       "source": "/(.*)",
@@ -10,8 +7,5 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" }
   ]
 }
