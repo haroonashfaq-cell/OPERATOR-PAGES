@@ -150,12 +150,11 @@ export default function Hero({ data }: { data: OperatorData }) {
             borderTop: '1px solid rgba(250,246,239,0.15)',
             flexWrap: 'wrap',
           }}>
-            {[
+            {(data.heroStats || [
               { value: `${data.floorPlans.length}`, label: 'Floor Plans' },
               { value: `$${Math.min(...data.floorPlans.map(p => p.price)).toLocaleString()}`, label: 'Starting From' },
               { value: `${Math.min(...data.floorPlans.map(p => p.sqft))}-${Math.max(...data.floorPlans.map(p => p.sqft)).toLocaleString()}`, label: 'Sq Ft Range' },
-              { value: '2', label: 'Resort Pools' },
-            ].map((stat, i) => (
+            ]).map((stat, i) => (
               <div key={i}>
                 <p style={{
                   fontFamily: 'var(--ff-display)',

@@ -5,13 +5,12 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useRef } from 'react'
 import type { OperatorData } from '@/data/operators'
 
-const FEES = {
-  water: 68,
-  pest: 5,
-  valet: 35,
-  package: 15,
-}
-const REQUIRED_TOTAL = FEES.water + FEES.pest + FEES.valet + FEES.package
+const DEFAULT_FEES = [
+  { label: 'Water / sewer / trash', amount: 68 },
+  { label: 'Pest control', amount: 5 },
+  { label: 'Valet trash', amount: 35 },
+  { label: 'Package lockers', amount: 15 },
+]
 
 const ADD_ONS = [
   { id: 'pet', label: 'Pet rent', amount: 35 },
@@ -23,6 +22,9 @@ const ADD_ONS = [
 export default function RentCalculator({ data }: { data: OperatorData }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
+
+  const fees = data.requiredFees || DEFAULT_FEES
+  const REQUIRED_TOTAL = fees.reduce((sum, f) => sum + f.amount, 0)
 
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [activeAddOns, setActiveAddOns] = useState<Set<string>>(new Set())
@@ -388,7 +390,7 @@ export default function RentCalculator({ data }: { data: OperatorData }) {
                   <span>Required fees</span>
                   <span style={{ fontVariantNumeric: 'tabular-nums', display: 'flex', alignItems: 'center', gap: 6 }}>
                     ${REQUIRED_TOTAL}
-                    <span title="Water/sewer/trash ($68) + Pest control ($5) + Valet trash ($35) + Package lockers ($15)" style={{
+                    <span title={fees.map(f => `${f.label} ($${f.amount})`).join(' + ')} style={{
                       width: 16,
                       height: 16,
                       borderRadius: '50%',

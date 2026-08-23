@@ -64,7 +64,7 @@
     { "src": "/images/towne-properties/cincinnati.jpg", "alt": "Cincinnati skyline", "caption": "20 minutes to downtown Cincinnati" }
   ],
   "faqs": [
-    { "question": "What floor plans does Harpers Point offer?", "answer": "Harpers Point offers 9 floor plans including one-bedroom apartments (696-826 sq ft), two-bedroom apartments and townhomes (848-1,405 sq ft), and three-bedroom townhomes (1,405-1,445 sq ft). Prices range from $1,285 to $3,140 per month (as of Q3 2026)." },
+    { "question": "What floor plans does Harpers Point offer?", "answer": "Harpers Point offers 8 floor plans including one-bedroom apartments (696-826 sq ft), two-bedroom apartments and townhomes (848-1,405 sq ft), and three-bedroom townhomes (1,405-1,445 sq ft). Prices range from $1,285 to $2,601 per month (as of Q3 2026)." },
     { "question": "Are pets allowed at Harpers Point?", "answer": "Yes, Harpers Point is pet-friendly. A maximum of 2 pets per unit is allowed with a 50 lb weight limit. Breed restrictions apply. Pet rent is $35 per month per pet, with a $150 refundable fee and $150 nonrefundable fee." },
     { "question": "Does Harpers Point have a pool?", "answer": "Yes, Harpers Point features a resort-style swimming pool with a sundeck, plus a white sand beach area within the community. The community was designed around a resort-living concept." },
     { "question": "What is the pub at Harpers Point?", "answer": "Harpers Point has a full-service pub on-site that is open 7 days a week. Residents can enjoy dining and drinks without leaving the community, a unique amenity not found at most apartment communities." },
@@ -77,6 +77,24 @@
   ],
   "tourHeadline": "Your personal tour awaits",
   "tourDescription": "Experience Harpers Point in person. Schedule a tour and discover why residents call it their peaceful retreat.",
-  "metaTitle": "Harpers Point Apartments | Resort-Style Cincinnati Living | brightplace",
-  "metaDescription": "Explore Harpers Point in Cincinnati. 9 floor plans from $1,285/mo with white sand beach, resort pool, full-service pub, and award-winning landscaping. 20 min to downtown."
+  "metaTitle": "Harpers Point | Resort Cincinnati Apartments | brightplace",
+  "metaDescription": "Harpers Point in Cincinnati. 8 floor plans from $1,285/mo with white sand beach, resort pool, and full-service pub.",
+  "distances": [
+    { "place": "Shops at Harper's Point", "time": "7 min walk" },
+    { "place": "Downtown Cincinnati", "time": "20 min" },
+    { "place": "Regal Deerfield", "time": "5 min" }
+  ],
+  "heroStats": [
+    { "value": "8", "label": "Floor Plans" },
+    { "value": "$1,285", "label": "Starting From" },
+    { "value": "696-1,445", "label": "Sq Ft Range" },
+    { "value": "1", "label": "Resort Pool" }
+  ],
+  "requiredFees": [
+    { "label": "Water / sewer / trash", "amount": 65 },
+    { "label": "Pest control", "amount": 5 },
+    { "label": "Valet trash", "amount": 30 }
+  ],
+  "latitude": 39.2639,
+  "longitude": -84.3271
 }

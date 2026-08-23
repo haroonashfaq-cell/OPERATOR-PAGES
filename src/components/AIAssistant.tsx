@@ -52,11 +52,8 @@ function getAIResponse(question: string, data: OperatorData): string {
 
   if (q.includes('location') || q.includes('neighborhood') || q.includes('where') || q.includes('near') || q.includes('park') || q.includes('downtown')) {
     return `${data.name} is located at ${data.address}, ${data.city}, ${data.state} ${data.zip}.\n\n` +
-      `Nearby highlights:\n` +
-      `- Cherry Creek State Park: ~10 minutes\n` +
-      `- Cherry Creek Shopping Center: ~15 minutes\n` +
-      `- Downtown Denver: ~20 minutes\n\n` +
-      `The neighborhood is perfect for those who want access to nature and city life.`
+      `${data.neighborhoodDescription}\n\n` +
+      (data.distances ? `Nearby:\n` + data.distances.map(d => `- ${d.place}: ${d.time}`).join('\n') : '')
   }
 
   if (q.includes('move-in') || q.includes('special') || q.includes('promo') || q.includes('deal') || q.includes('free')) {

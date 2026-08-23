@@ -77,6 +77,11 @@ export interface PropertyData {
   tourDescription: string
   metaTitle: string
   metaDescription: string
+  distances?: { place: string; time: string }[]
+  heroStats?: { value: string; label: string }[]
+  requiredFees?: { label: string; amount: number }[]
+  latitude?: number
+  longitude?: number
 }
 
 // For backward compat

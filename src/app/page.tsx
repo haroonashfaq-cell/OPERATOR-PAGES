@@ -33,7 +33,7 @@ const OPERATORS = [
       city: 'Cincinnati, OH',
       image: '/images/towne-properties/hero-pool.jpg',
       price: 1285,
-      plans: 9,
+      plans: 8,
       highlight: 'White sand beach & pub',
     },
   },

@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       return {
         title: `${opMeta.name} Stories & Guides | brightplace`,
         description: `Read guides, reviews, and neighborhood insights about ${opMeta.name} communities.`,
+        alternates: { canonical: `https://operator.brightplace.ai/${operator}/${slug}` },
       }
     }
   }
@@ -50,6 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       return {
         title: `${property.name} Stories & Guides | brightplace`,
         description: `Read guides and insights about ${property.name} ${property.subtitle} in ${property.city}, ${property.state}.`,
+        alternates: { canonical: `https://operator.brightplace.ai/${operator}/${slug}` },
       }
     }
   }
@@ -57,6 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Check if it's a story
   const story = getStory(operator, slug)
   if (story) {
+    const storyProperty = getProperty(operator, story.propertySlug)
     return {
       title: story.metaTitle,
       description: story.metaDescription,
@@ -65,6 +68,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: story.metaDescription,
         type: 'article',
         url: `https://operator.brightplace.ai/${operator}/${slug}`,
+        ...(storyProperty ? { images: [{ url: storyProperty.heroImage, width: 1200, height: 630 }] } : {}),
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: story.metaTitle,
+        description: story.metaDescription,
+        ...(storyProperty ? { images: [{ url: storyProperty.heroImage, width: 1200, height: 630 }] } : {}),
       },
       alternates: { canonical: `https://operator.brightplace.ai/${operator}/${slug}` },
     }
@@ -366,6 +376,13 @@ export default async function Page({ params }: PageProps) {
       postalCode: data.zip,
       addressCountry: 'US',
     },
+    ...(data.latitude && data.longitude ? {
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: data.latitude,
+        longitude: data.longitude,
+      },
+    } : {}),
     telephone: data.phone,
     email: data.email,
     image: data.heroImage,
@@ -383,6 +400,13 @@ export default async function Page({ params }: PageProps) {
       unitCode: 'FTK',
     },
     priceRange: `$${Math.min(...data.floorPlans.map((p) => p.price)).toLocaleString()} - $${Math.max(...data.floorPlans.map((p) => p.price)).toLocaleString()}/mo`,
+    makesOffer: data.floorPlans.map((p) => ({
+      '@type': 'Offer',
+      name: `${p.name} - ${p.tier}`,
+      price: p.price,
+      priceCurrency: 'USD',
+      availability: p.promo === 'Waitlist' ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock',
+    })),
   }
 
   const faqJsonLd = {

@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'website',
       url: `https://operator.brightplace.ai/${operator}`,
     },
+    alternates: { canonical: `https://operator.brightplace.ai/${operator}` },
   }
 }
 

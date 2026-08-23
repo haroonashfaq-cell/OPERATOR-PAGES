@@ -36,12 +36,9 @@ export default function Neighborhood({ data }: { data: OperatorData }) {
           </p>
 
           {/* Distance chips */}
+          {data.distances && data.distances.length > 0 && (
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 28 }}>
-            {[
-              { place: 'Cherry Creek State Park', time: '10 min' },
-              { place: 'Cherry Creek Mall', time: '15 min' },
-              { place: 'Downtown Denver', time: '20 min' },
-            ].map((d, i) => (
+            {data.distances.map((d, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 12 }}
@@ -79,6 +76,7 @@ export default function Neighborhood({ data }: { data: OperatorData }) {
               </motion.div>
             ))}
           </div>
+          )}
         </motion.div>
 
         {/* Image */}

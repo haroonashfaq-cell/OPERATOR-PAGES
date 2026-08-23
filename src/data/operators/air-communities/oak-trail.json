@@ -77,6 +77,25 @@
   ],
   "tourHeadline": "Your personal tour awaits",
   "tourDescription": "We are here to provide an exceptional living experience. Schedule your tour and we will customize it to meet your every need.",
-  "metaTitle": "Oak Trail at Cherry Creek South | Modern Denver Apartments | brightplace",
-  "metaDescription": "Explore Oak Trail at Cherry Creek South in Denver. One to three bedroom apartments with all-in pricing, two resort-style pools, and a 24-hour fitness center. Starting at $1,512/mo."
+  "metaTitle": "Oak Trail Cherry Creek South | Denver Apartments | brightplace",
+  "metaDescription": "Oak Trail at Cherry Creek South in Denver. 7 floor plans from $1,512/mo with all-in pricing, two pools, and dog park.",
+  "distances": [
+    { "place": "Cherry Creek State Park", "time": "10 min" },
+    { "place": "Cherry Creek Mall", "time": "15 min" },
+    { "place": "Downtown Denver", "time": "20 min" }
+  ],
+  "heroStats": [
+    { "value": "7", "label": "Floor Plans" },
+    { "value": "$1,512", "label": "Starting From" },
+    { "value": "678-1,380", "label": "Sq Ft Range" },
+    { "value": "2", "label": "Resort Pools" }
+  ],
+  "requiredFees": [
+    { "label": "Water / sewer / trash", "amount": 68 },
+    { "label": "Pest control", "amount": 5 },
+    { "label": "Valet trash", "amount": 35 },
+    { "label": "Package lockers", "amount": 15 }
+  ],
+  "latitude": 39.6536,
+  "longitude": -104.9424
 }
