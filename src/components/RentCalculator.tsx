@@ -525,6 +525,44 @@ export default function RentCalculator({ data }: { data: OperatorData }) {
           </motion.div>
         </div>
       </div>
+
+      {/* Mobile sticky bottom bar */}
+      <div className="mobile-price-bar" style={{
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        background: 'var(--bg-surface)',
+        borderTop: '1px solid var(--bp-line)',
+        boxShadow: '0 -4px 20px rgba(26,39,68,0.1)',
+        padding: '12px clamp(16px, 4vw, 24px)',
+        display: 'none',
+      }}>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          maxWidth: 600,
+          margin: '0 auto',
+        }}>
+          <div>
+            <p style={{ fontFamily: 'var(--ff-body)', fontSize: 11, color: 'var(--bp-ink-muted)', margin: '0 0 1px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {plan.name} · All-in
+            </p>
+            <p style={{
+              fontFamily: 'var(--ff-display)', fontWeight: 700,
+              fontSize: 24, letterSpacing: '-0.02em',
+              fontVariantNumeric: 'tabular-nums', color: 'var(--bp-navy)', margin: 0,
+            }}>
+              ${total.toLocaleString()}<span style={{ fontSize: 13, fontWeight: 400, color: 'var(--bp-ink-muted)' }}>/mo</span>
+            </p>
+          </div>
+          <a href="#tour" className="btn-primary" style={{ fontSize: 14, padding: '12px 24px' }}>
+            Lock in this rate
+          </a>
+        </div>
+      </div>
     </section>
   )
 }
