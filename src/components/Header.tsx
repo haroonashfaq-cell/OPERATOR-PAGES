@@ -20,7 +20,7 @@ export default function Header({ data, operatorSlug, propertySlug }: HeaderProps
   })
 
   const storyUrl = operatorSlug && propertySlug
-    ? `/${operatorSlug}/${propertySlug}-resort-guide`
+    ? `/${operatorSlug}/${propertySlug}-stories`
     : undefined
 
   const navLinks = [

@@ -62,6 +62,29 @@ export function getStoriesByProperty(operatorSlug: string, propertySlug: string)
   return allStories[operatorSlug]?.filter(s => s.propertySlug === propertySlug) || []
 }
 
+// Stories index: e.g. "oak-trail-stories" slug resolves to a listing page
+export function isStoriesIndex(slug: string): { propertySlug: string } | null {
+  if (slug.endsWith('-stories')) {
+    return { propertySlug: slug.replace('-stories', '') }
+  }
+  return null
+}
+
+export function getAllStoriesIndexParams(): { operator: string; slug: string }[] {
+  const params: { operator: string; slug: string }[] = []
+  const seenProperties = new Set<string>()
+  for (const [operator, stories] of Object.entries(allStories)) {
+    for (const story of stories) {
+      const key = `${operator}/${story.propertySlug}`
+      if (!seenProperties.has(key)) {
+        seenProperties.add(key)
+        params.push({ operator, slug: `${story.propertySlug}-stories` })
+      }
+    }
+  }
+  return params
+}
+
 // ─── ARTICLES ───
 
 function HarpersPointArticle({ operator, slug }: { operator: string; slug: string }) {
