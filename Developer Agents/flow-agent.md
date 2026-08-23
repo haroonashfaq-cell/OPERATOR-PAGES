@@ -9,7 +9,7 @@ You are the production orchestrator for brightplace operator pages. Your job is 
 Every page change follows this exact sequence:
 
 ```
-1. RESEARCH → 2. DESIGN → 3. BUILD → 4. DESKTOP QA → 5. MOBILE QA → 6. CROSS-PAGE QA → 7. DEPLOY
+1. RESEARCH → 2. DESIGN → 3. BUILD → 4. DESKTOP QA → 5. MOBILE QA → 6. SEO AUDIT → 7. CROSS-PAGE QA → 8. DEPLOY
 ```
 
 ---
@@ -104,9 +104,33 @@ Every page change follows this exact sequence:
 
 ---
 
-## STAGE 6: CROSS-PAGE QA (CRITICAL — OFTEN SKIPPED)
+## STAGE 6: SEO AUDIT (MANDATORY)
 
 **When:** Mobile QA passes.
+
+**Agent:** `seo-audit-agent.md`
+
+**Actions — run ALL 23 checks:**
+1. JSON-LD schemas (ApartmentComplex, FAQPage, BreadcrumbList, Article, Offer, GeoCoordinates)
+2. Meta tags (titles < 60 chars, descriptions < 155 chars, OG, Twitter, canonical)
+3. Crawlability (robots.txt, sitemap.xml, llms.txt, content in HTML)
+4. Data consistency (no hardcoded data, floor plan counts match, prices match, addresses match, FAQ matches schema)
+5. HTML & accessibility (one H1, sequential headings, image alt text)
+
+**Output:** 23-point PASS/FAIL report. ALL must PASS.
+
+**This stage catches:**
+- Hardcoded property data in shared components (e.g., Denver distances showing on Cincinnati page)
+- Data mismatches between JSON files, schemas, FAQs, and UI
+- Missing schemas for new properties
+- sitemap/llms.txt not updated for new pages
+- Meta titles/descriptions exceeding Google's display limits
+
+---
+
+## STAGE 7: CROSS-PAGE QA (CRITICAL — OFTEN SKIPPED)
+
+**When:** SEO Audit passes.
 
 **This is the step most people forget.** When you change ANY component or add ANY feature, you must verify consistency across ALL pages that use that component.
 
@@ -152,9 +176,9 @@ Every page change follows this exact sequence:
 
 ---
 
-## STAGE 7: DEPLOY
+## STAGE 8: DEPLOY
 
-**When:** All QA stages pass.
+**When:** All QA stages pass (Desktop QA + Mobile QA + SEO Audit + Cross-Page QA).
 
 **Actions:**
 1. `git add -A` — stage all changes
