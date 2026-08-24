@@ -46,7 +46,7 @@ const allStories: Record<string, StoryData[]> = {
       propertySlug: 'lakeview-gateway-park',
       title: 'Lakeview at Gateway Park: Lakeside Denver Apartments with Community Lake and Light Rail Access',
       metaTitle: 'Lakeview at Gateway Park Denver: Pricing & Guide | brightplace',
-      metaDescription: 'Lakeview at Gateway Park in Denver offers 5 floor plans from $1,450/mo with a community lake, resort pool, and light rail access.',
+      metaDescription: 'Lakeview at Gateway Park in Denver offers 8 floor plans from $1,450/mo with community lake, resort pool, heated spa, and light rail.',
       primaryKeyword: 'Lakeview at Gateway Park Denver',
       readTime: '6 min',
       datePublished: '2026-08-24',
@@ -275,7 +275,7 @@ function LakeviewArticle({ operator, slug }: { operator: string; slug: string })
   return (
     <>
       <p>
-        Lakeview at Gateway Park is a lakeside apartment community at 4699 Kittredge St in Denver, Colorado, managed by AIR Communities. The property offers five floor plans from $1,450 per month (as of Q3 2026) with a community lake, resort-style pool with cabanas, on-site dog park, and light rail access steps from the front door.
+        Lakeview at Gateway Park is a lakeside apartment community at 4699 Kittredge St in Denver, Colorado, managed by AIR Communities. The property offers eight floor plans from $1,450 per month (as of Q3 2026) with a community lake, resort-style pool with cabanas, on-site dog park, and light rail access steps from the front door.
       </p>
 
       <h2 id="community-lake">What is the community lake at Lakeview?</h2>
@@ -292,13 +292,16 @@ function LakeviewArticle({ operator, slug }: { operator: string; slug: string })
       </Link>
 
       <h2 id="pricing">How much does Lakeview at Gateway Park cost?</h2>
-      <p>Lakeview offers five floor plans ranging from $1,450 to $2,605 per month (as of Q3 2026). Select apartments currently offer up to two months free as a move-in promotion.</p>
+      <p>Lakeview offers eight floor plans ranging from $1,450 to $2,605 per month (as of Q3 2026). Select apartments currently offer up to two months free as a move-in promotion.</p>
       <div className="data-card">
         <h4>Lakeview floor plans and pricing (as of Q3 2026)</h4>
         <div className="data-row"><span>Design 1A (1bd/1ba, 689 ft²)</span><span>$1,450/mo</span></div>
         <div className="data-row"><span>Design 1B (1bd/1ba, 756 ft²)</span><span>$1,585/mo</span></div>
+        <div className="data-row"><span>Design 1C (1bd/1ba, 826 ft²)</span><span>$1,693/mo</span></div>
+        <div className="data-row"><span>Design 1D (1bd/1ba, 832 ft²)</span><span>$1,718/mo</span></div>
         <div className="data-row"><span>Design 2A10 (2bd/1ba, 920 ft²)</span><span>$1,825/mo</span></div>
         <div className="data-row"><span>Design 2A20 (2bd/2ba, 1,072 ft²)</span><span>$1,914/mo</span></div>
+        <div className="data-row"><span>Design 2B20 (2bd/2ba, 1,118 ft²)</span><span>$1,945/mo</span></div>
         <div className="data-row"><span>Design 3A (3bd/2ba, 1,314 ft²)</span><span>$2,605/mo</span></div>
       </div>
 
