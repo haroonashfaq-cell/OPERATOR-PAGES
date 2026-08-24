@@ -42,28 +42,28 @@ const OPERATORS = [
 const FEATURES = [
   {
     title: 'All-in pricing',
-    description: 'Every price includes required monthly fees. No surprise line items at lease signing. What you see is what you pay.',
+    description: 'Every price includes required monthly fees, so what you see is what you pay — no surprises when you’re ready to sign.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
     ),
   },
   {
-    title: 'AI-ready pages',
-    description: 'Structured data that ChatGPT, Claude, and Perplexity can read and cite. Your properties show up when renters ask AI for recommendations.',
+    title: 'Real community stories',
+    description: 'Photos, floor plans, and neighborhood details that show you what living there actually feels like — not just a listing.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8 6a4 4 0 0 1 8 0"/><path d="M12 18v-4"/><circle cx="12" cy="20" r="2"/></svg>
     ),
   },
   {
-    title: 'Built for search',
-    description: 'Static HTML that Google indexes instantly. Schema markup, FAQ rich results, and Open Graph for social. Every page is an SEO asset.',
+    title: 'Easy to explore',
+    description: 'Every community and floor plan from our partner operators, laid out in one clean, fast gallery — no clutter, no dead ends.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     ),
   },
   {
-    title: 'Lead generation',
-    description: 'Interactive rent calculators, AI chat assistants, and tracked CTAs that turn page visits into tour bookings.',
+    title: 'Book a tour in minutes',
+    description: 'Found a place you love? Schedule a tour right from the page — no phone tag, no waiting on a callback.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
     ),
@@ -71,10 +71,10 @@ const FEATURES = [
 ]
 
 const STATS = [
-  { value: '289+', label: 'Properties powered' },
-  { value: '2', label: 'Operators live' },
-  { value: '16', label: 'Floor plans listed' },
-  { value: '100%', label: 'AI crawlable' },
+  { value: '289+', label: 'Communities featured' },
+  { value: '2', label: 'Partner operators' },
+  { value: '16', label: 'Floor plans to explore' },
+  { value: '100%', label: 'Tour-ready' },
 ]
 
 export default function HomePage() {
@@ -177,7 +177,7 @@ export default function HomePage() {
             marginBottom: 28,
           }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--bp-teal)', animation: 'pulse-ring 2s ease-out infinite' }} />
-            Operator property pages
+            A gallery of partner communities
           </span>
         </motion.div>
 
@@ -197,8 +197,8 @@ export default function HomePage() {
             position: 'relative',
           }}
         >
-          Property pages that{' '}
-          <span style={{ color: 'var(--bp-orange)' }}>generate leads</span>
+          A gallery of communities{' '}
+          <span style={{ color: 'var(--bp-orange)' }}>worth discovering</span>
         </motion.h1>
 
         <motion.p
@@ -214,7 +214,7 @@ export default function HomePage() {
             margin: '0 auto 40px',
           }}
         >
-          brightplace builds SEO-optimized, AI-ready property pages for apartment operators. All-in pricing. Interactive rent calculators. Every page designed to convert visitors into tours.
+          brightplace brings together apartment communities from operators we're proud to partner with — so you can browse real places, see what makes each one special, and book a tour in just a few clicks.
         </motion.p>
 
         <motion.div
@@ -240,7 +240,7 @@ export default function HomePage() {
             gap: 8,
             transition: 'border-color 0.2s, background 0.2s',
           }}>
-            Learn about brightplace
+            About brightplace
           </a>
         </motion.div>
       </section>
@@ -305,8 +305,8 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             style={{ textAlign: 'center', marginBottom: 'clamp(40px, 6vw, 64px)' }}
           >
-            <p className="section-label" style={{ justifyContent: 'center' }}>Operators</p>
-            <h2 className="section-heading">Communities powered by brightplace</h2>
+            <p className="section-label" style={{ justifyContent: 'center' }}>Our partners</p>
+            <h2 className="section-heading">Communities in the gallery</h2>
             <p style={{
               fontFamily: 'var(--ff-body)',
               fontSize: 17,
@@ -315,7 +315,7 @@ export default function HomePage() {
               maxWidth: '44ch',
               lineHeight: 1.6,
             }}>
-              Each operator gets a fully branded portfolio with individual property pages, rent calculators, and AI-powered assistants.
+              Browse every operator we partner with, see the communities they're proud of, and find the one that feels like home.
             </p>
           </motion.div>
 
@@ -527,7 +527,7 @@ export default function HomePage() {
               color: 'var(--bp-paper)',
               margin: 0,
             }}>
-              Every page is a growth engine
+              Every community, beautifully presented
             </h2>
           </motion.div>
 
@@ -603,7 +603,7 @@ export default function HomePage() {
           color: 'var(--bp-navy)',
           margin: '0 0 16px',
         }}>
-          Ready to see your communities on brightplace?
+          Ready to find your next home?
         </h2>
         <p style={{
           fontFamily: 'var(--ff-body)',
@@ -613,12 +613,20 @@ export default function HomePage() {
           maxWidth: '42ch',
           lineHeight: 1.6,
         }}>
-          We build property pages that rank in search, get cited by AI, and convert visitors into leasing inquiries.
+          Browse every community in the gallery, compare floor plans, and book a tour whenever you're ready.
         </p>
-        <a href="mailto:hello@brightplace.ai" className="btn-primary" style={{ fontSize: 16, padding: '16px 36px' }}>
-          Get started
+        <a href="#operators" className="btn-primary" style={{ fontSize: 16, padding: '16px 36px' }}>
+          Explore communities
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
         </a>
+        <p style={{
+          fontFamily: 'var(--ff-body)',
+          fontSize: 13,
+          color: 'var(--bp-ink-muted)',
+          margin: '20px 0 0',
+        }}>
+          Manage a community and want to be featured? <a href="mailto:hello@brightplace.ai" style={{ color: 'var(--bp-teal-deep)', fontWeight: 600 }}>Get in touch</a>.
+        </p>
       </section>
 
       {/* ─── FOOTER ─── */}

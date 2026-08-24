@@ -66,7 +66,7 @@ export default async function OperatorPage({ params }: PageProps) {
           color: 'var(--bp-orange)',
           margin: '0 0 16px',
         }}>
-          Operator Portfolio
+          Partner Spotlight
         </p>
         <h1 style={{
           fontFamily: 'var(--ff-display)',
@@ -136,7 +136,7 @@ export default async function OperatorPage({ params }: PageProps) {
           color: 'var(--bp-ink-muted)',
           marginBottom: 28,
         }}>
-          {properties.length} {properties.length === 1 ? 'community' : 'communities'} on brightplace
+          {properties.length} {properties.length === 1 ? 'community' : 'communities'} in the gallery
         </p>
 
         <div style={{
