@@ -1,0 +1,102 @@
+{
+  "slug": "lakeview-gateway-park",
+  "name": "Lakeview at Gateway Park",
+  "subtitle": "Lakeside Denver Living",
+  "address": "4699 Kittredge St",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80239",
+  "phone": "(983) 200-7494",
+  "email": "leasing@lakeviewgatewaypark.com",
+  "heroImage": "/images/air-communities/hero-pool.jpg",
+  "heroAlt": "Resort-style pool with cabanas at Lakeview at Gateway Park in Denver",
+  "heroHeadline": "Lakeside apartments near Denver International Airport",
+  "heroDescription": "One, two, and three bedroom apartments with community lake, resort-style pool with cabanas, and on-site dog park. Near the 40th Ave light rail station and The Shops at Northfield.",
+  "promoText": "Up to two months free on select apartment homes",
+  "pricingHeadline": "The price you see is the price you pay",
+  "pricingDescription": "Every price includes required monthly fees. No surprise line items at lease signing, no hidden costs on move-in day.",
+  "pricingBullets": [
+    "All required fees included in the listed price",
+    "Pet rent, parking, and deposits quoted in writing at application",
+    "6 to 12 month lease terms available"
+  ],
+  "samplePlan": {
+    "name": "Design 2A20",
+    "details": "2 bed, 2 bath, 1,072 sq ft.",
+    "breakdown": [
+      { "label": "Base rent", "value": "$1,914" },
+      { "label": "Water / sewer / trash", "value": "$65" },
+      { "label": "Pest control", "value": "$5" },
+      { "label": "Valet trash", "value": "$30" }
+    ],
+    "total": "$2,014",
+    "note": "Electricity, gas, and internet are billed separately by your provider."
+  },
+  "floorPlans": [
+    { "name": "Design 1A", "tier": "One Bedroom", "beds": 1, "baths": 1, "sqft": 689, "price": 1450, "img": "/images/air-communities/plan-1a.png", "imgAlt": "Floor plan for Design 1A one bedroom" },
+    { "name": "Design 1B", "tier": "One Bedroom", "beds": 1, "baths": 1, "sqft": 756, "price": 1585, "img": "/images/air-communities/plan-1b.png", "imgAlt": "Floor plan for Design 1B one bedroom" },
+    { "name": "Design 2A10", "tier": "Two Bedroom", "beds": 2, "baths": 1, "sqft": 920, "price": 1825, "img": "/images/air-communities/plan-2a.png", "imgAlt": "Floor plan for Design 2A10 two bedroom", "promo": "2 mo free" },
+    { "name": "Design 2A20", "tier": "Two Bedroom", "beds": 2, "baths": 2, "sqft": 1072, "price": 1914, "img": "/images/air-communities/plan-2b.png", "imgAlt": "Floor plan for Design 2A20 two bedroom", "promo": "2 mo free" },
+    { "name": "Design 3A", "tier": "Three Bedroom", "beds": 3, "baths": 2, "sqft": 1314, "price": 2605, "img": "/images/air-communities/plan-3a.png", "imgAlt": "Floor plan for Design 3A three bedroom" }
+  ],
+  "amenitiesHeadline": "Lakeside living with every convenience",
+  "amenitiesDescription": "Resort amenities on a community lake.",
+  "amenities": [
+    { "title": "Community lake", "description": "Fishing and trail jogging along the waterfront" },
+    { "title": "Resort-style pool with cabanas", "description": "Sundeck and private cabanas for relaxation" },
+    { "title": "24-hour fitness center", "description": "Fully equipped gym available around the clock" },
+    { "title": "On-site dog park", "description": "Dedicated space for off-leash play" },
+    { "title": "Resident clubhouse", "description": "Full kitchen, billiards, HDTVs, and lounge seating" },
+    { "title": "Outdoor kitchen", "description": "Barbecue areas and outdoor dining spaces" },
+    { "title": "Business center", "description": "Wi-Fi equipped workspace for remote work" },
+    { "title": "Playground", "description": "On-site play area for families" }
+  ],
+  "amenityImage": "/images/air-communities/fitness.jpg",
+  "amenityImageAlt": "24-hour fitness center at Lakeview at Gateway Park",
+  "neighborhoodHeadline": "Connected to everything Denver offers",
+  "neighborhoodDescription": "Lakeview at Gateway Park is steps from the 40th Ave and Airport Blvd light rail station, connecting you to downtown Denver without a car. The Shops at Northfield offer dining, retail, and entertainment five minutes away. Denver International Airport is a quick 15-minute drive. I-70 access puts you 20 minutes from downtown.",
+  "neighborhoodImage": "/images/air-communities/denver-skyline.jpg",
+  "neighborhoodImageAlt": "Denver skyline with mountains in the background",
+  "galleryImages": [
+    { "src": "/images/air-communities/hero-pool.jpg", "alt": "Resort pool with cabanas", "caption": "Resort-style pool with private cabanas" },
+    { "src": "/images/air-communities/kitchen.jpg", "alt": "Modern kitchen with granite counters", "caption": "Granite countertops and stainless steel" },
+    { "src": "/images/air-communities/living-room.jpg", "alt": "Spacious living room", "caption": "Open living spaces with wood-style flooring" },
+    { "src": "/images/air-communities/dog-park.jpg", "alt": "On-site dog park", "caption": "Dedicated off-leash dog park" },
+    { "src": "/images/air-communities/denver-skyline.jpg", "alt": "Denver skyline", "caption": "20 minutes from downtown Denver" }
+  ],
+  "faqs": [
+    { "question": "What floor plans does Lakeview at Gateway Park offer?", "answer": "Lakeview offers 5 floor plans: two one-bedroom layouts (689-756 sq ft), two two-bedroom layouts (920-1,072 sq ft), and one three-bedroom layout (1,314 sq ft). Prices range from $1,450 to $2,605 per month (as of Q3 2026)." },
+    { "question": "Does Lakeview have a lake?", "answer": "Yes. Lakeview at Gateway Park features a community lake with fishing access and jogging trails along the waterfront. The lakeside setting is a central feature of the community." },
+    { "question": "Are pets allowed at Lakeview?", "answer": "Yes, Lakeview is pet-friendly with an on-site dog park for off-leash play. Breed restrictions and weight limits apply. Pet deposits and monthly pet rent are quoted at application." },
+    { "question": "Is there a move-in special?", "answer": "Yes. Select apartment homes currently offer up to two months free. Conditions apply. Contact the leasing office for eligible floor plans and current availability." },
+    { "question": "How far is Lakeview from downtown Denver?", "answer": "Lakeview is approximately 20 minutes from downtown Denver via I-70. The 40th Ave and Airport Blvd light rail station is within walking distance for car-free commuting." },
+    { "question": "Is Lakeview near public transit?", "answer": "Yes. The 40th Ave and Airport Blvd light rail station is steps from the community, providing direct rail access to downtown Denver and Denver International Airport." },
+    { "question": "What amenities does Lakeview offer?", "answer": "Amenities include a community lake, resort-style pool with cabanas, 24-hour fitness center, on-site dog park, resident clubhouse with billiards and kitchen, outdoor barbecue areas, business center, and playground." },
+    { "question": "What apartment features are included?", "answer": "Apartments include stainless steel appliances, granite countertops, wood-style flooring, and spacious layouts. The community is a smoke-free property." },
+    { "question": "What is near Lakeview at Gateway Park?", "answer": "The Shops at Northfield (5 min), 40th Ave light rail station (walking distance), Denver International Airport (15 min), Rocky Mountain Arsenal Wildlife Refuge (10 min), and downtown Denver (20 min)." },
+    { "question": "What are the office hours?", "answer": "The leasing office is open Tuesday through Friday 10am to 6pm, and Saturday 10am to 5pm. The office is closed on Sunday and Monday. Tours can be scheduled online." }
+  ],
+  "tourHeadline": "Your personal tour awaits",
+  "tourDescription": "Experience lakeside living in person. Schedule a tour and discover why Lakeview at Gateway Park feels like a retreat.",
+  "metaTitle": "Lakeview at Gateway Park | Denver Apartments | brightplace",
+  "metaDescription": "Lakeview at Gateway Park in Denver. 5 floor plans from $1,450/mo with community lake, resort pool, and dog park.",
+  "distances": [
+    { "place": "40th Ave Light Rail", "time": "Walking" },
+    { "place": "Shops at Northfield", "time": "5 min" },
+    { "place": "DIA Airport", "time": "15 min" },
+    { "place": "Downtown Denver", "time": "20 min" }
+  ],
+  "heroStats": [
+    { "value": "5", "label": "Floor Plans" },
+    { "value": "$1,450", "label": "Starting From" },
+    { "value": "689-1,314", "label": "Sq Ft Range" },
+    { "value": "1", "label": "Community Lake" }
+  ],
+  "requiredFees": [
+    { "label": "Water / sewer / trash", "amount": 65 },
+    { "label": "Pest control", "amount": 5 },
+    { "label": "Valet trash", "amount": 30 }
+  ],
+  "latitude": 39.7812,
+  "longitude": -104.8486
+}

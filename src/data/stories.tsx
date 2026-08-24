@@ -38,8 +38,32 @@ const allStories: Record<string, StoryData[]> = {
       primaryKeyword: 'Oak Trail at Cherry Creek South',
       readTime: '7 min',
       datePublished: '2026-08-23',
-      dateModified: '2026-08-23',
+      dateModified: '2026-08-24',
       content: OakTrailArticle,
+    },
+    {
+      slug: 'lakeview-gateway-park-guide',
+      propertySlug: 'lakeview-gateway-park',
+      title: 'Lakeview at Gateway Park: Lakeside Denver Apartments with Community Lake and Light Rail Access',
+      metaTitle: 'Lakeview at Gateway Park Denver: Pricing & Guide | brightplace',
+      metaDescription: 'Lakeview at Gateway Park in Denver offers 5 floor plans from $1,450/mo with a community lake, resort pool, and light rail access.',
+      primaryKeyword: 'Lakeview at Gateway Park Denver',
+      readTime: '6 min',
+      datePublished: '2026-08-24',
+      dateModified: '2026-08-24',
+      content: LakeviewArticle,
+    },
+    {
+      slug: 'air-communities-all-in-pricing-explained',
+      propertySlug: 'oak-trail',
+      title: 'What Is All-In Pricing? How AIR Communities Apartments Show Your Real Monthly Cost',
+      metaTitle: 'All-In Pricing Explained: AIR Communities | brightplace',
+      metaDescription: 'AIR Communities uses all-in pricing on brightplace. Learn what fees are included, what is separate, and how to compare apartment costs.',
+      primaryKeyword: 'all-in pricing apartments',
+      readTime: '5 min',
+      datePublished: '2026-08-24',
+      dateModified: '2026-08-24',
+      content: AllInPricingArticle,
     },
   ],
 }
@@ -242,6 +266,128 @@ function OakTrailArticle({ operator, slug }: { operator: string; slug: string })
         <div className="faq-item"><strong>Does Oak Trail have a pool?</strong><p>Yes, two resort-style swimming pools with expansive sundecks and grilling areas.</p></div>
         <div className="faq-item"><strong>What utilities are included?</strong><p>Water, sewer, trash, pest control, valet trash, and package lockers are included. Electricity and internet billed separately.</p></div>
         <div className="faq-item"><strong>In-unit laundry?</strong><p>Yes. Every apartment includes an in-home washer and dryer, granite countertops, and private balcony or patio.</p></div>
+      </div>
+    </>
+  )
+}
+
+function LakeviewArticle({ operator, slug }: { operator: string; slug: string }) {
+  return (
+    <>
+      <p>
+        Lakeview at Gateway Park is a lakeside apartment community at 4699 Kittredge St in Denver, Colorado, managed by AIR Communities. The property offers five floor plans from $1,450 per month (as of Q3 2026) with a community lake, resort-style pool with cabanas, on-site dog park, and light rail access steps from the front door.
+      </p>
+
+      <h2 id="community-lake">What is the community lake at Lakeview?</h2>
+      <p>Lakeview at Gateway Park is built around a community lake that offers fishing access and jogging trails along the waterfront. The lakeside setting is the defining feature of the property, providing scenic water views from select apartments and a recreational amenity that most Denver apartment communities cannot match.</p>
+
+      <Link href={`/${operator}/${slug}#amenities`} className="cta-inline">
+        <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(245,166,35,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bp-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </div>
+        <div>
+          <p><strong style={{ color: 'var(--bp-navy)' }}>See all Lakeview amenities</strong></p>
+          <p style={{ color: 'var(--bp-ink-muted)', fontSize: '13px' }}>Lake, pool, fitness, dog park, clubhouse, and more</p>
+        </div>
+      </Link>
+
+      <h2 id="pricing">How much does Lakeview at Gateway Park cost?</h2>
+      <p>Lakeview offers five floor plans ranging from $1,450 to $2,605 per month (as of Q3 2026). Select apartments currently offer up to two months free as a move-in promotion.</p>
+      <div className="data-card">
+        <h4>Lakeview floor plans and pricing (as of Q3 2026)</h4>
+        <div className="data-row"><span>Design 1A (1bd/1ba, 689 ft²)</span><span>$1,450/mo</span></div>
+        <div className="data-row"><span>Design 1B (1bd/1ba, 756 ft²)</span><span>$1,585/mo</span></div>
+        <div className="data-row"><span>Design 2A10 (2bd/1ba, 920 ft²)</span><span>$1,825/mo</span></div>
+        <div className="data-row"><span>Design 2A20 (2bd/2ba, 1,072 ft²)</span><span>$1,914/mo</span></div>
+        <div className="data-row"><span>Design 3A (3bd/2ba, 1,314 ft²)</span><span>$2,605/mo</span></div>
+      </div>
+
+      <h2 id="light-rail">Is Lakeview near public transit?</h2>
+      <p>Yes. The 40th Ave and Airport Blvd light rail station is within walking distance of Lakeview at Gateway Park. The A Line connects directly to Denver International Airport and Union Station downtown, making car-free commuting practical for residents who work in central Denver or travel frequently.</p>
+
+      <h2 id="neighborhood">What is the neighborhood like?</h2>
+      <p>Lakeview sits in Denver's Gateway neighborhood. The Shops at Northfield, with dining, retail, and entertainment, are five minutes away. Denver International Airport is 15 minutes east. Rocky Mountain Arsenal National Wildlife Refuge, with over 15,000 acres of prairie and wetlands, is 10 minutes north. I-70 access puts downtown Denver 20 minutes away.</p>
+
+      <Link href={`/${operator}/${slug}#neighborhood`} className="cta-inline">
+        <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(245,166,35,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bp-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </div>
+        <div>
+          <p><strong style={{ color: 'var(--bp-navy)' }}>Explore the Gateway Park neighborhood</strong></p>
+          <p style={{ color: 'var(--bp-ink-muted)', fontSize: '13px' }}>Transit, shopping, wildlife refuge, and commute info</p>
+        </div>
+      </Link>
+
+      <h2 id="amenities">What amenities does Lakeview offer?</h2>
+      <p>Community amenities include the lakeside setting with fishing and trails, a resort-style pool with cabanas and sundeck, a 24-hour fitness center, an on-site dog park, a resident clubhouse with kitchen and billiards, outdoor barbecue kitchen, business center with Wi-Fi, and playground. The community is a smoke-free property.</p>
+
+      <div className="faq-section">
+        <h2 id="faq">Frequently asked questions about Lakeview at Gateway Park</h2>
+        <div className="faq-item"><strong>Does Lakeview have a lake?</strong><p>Yes. Lakeview features a community lake with fishing access and jogging trails. The lakeside setting provides water views and recreation without leaving the property.</p></div>
+        <div className="faq-item"><strong>Is Lakeview near the light rail?</strong><p>Yes. The 40th Ave and Airport Blvd light rail station is within walking distance, connecting to DIA and downtown Denver via the A Line.</p></div>
+        <div className="faq-item"><strong>What is the cheapest apartment?</strong><p>Design 1A at $1,450 per month (as of Q3 2026). One bedroom, one bathroom, 689 square feet.</p></div>
+        <div className="faq-item"><strong>Is there a move-in special?</strong><p>Yes. Select apartments offer up to two months free. Contact the leasing office at (983) 200-7494 for eligible plans.</p></div>
+        <div className="faq-item"><strong>Are pets allowed?</strong><p>Yes. Lakeview is pet-friendly with an on-site dog park. Breed restrictions and weight limits apply. Fees quoted at application.</p></div>
+        <div className="faq-item"><strong>Does Lakeview have a pool?</strong><p>Yes. A resort-style swimming pool with private cabanas and sundeck for resident use.</p></div>
+        <div className="faq-item"><strong>How far from downtown Denver?</strong><p>About 20 minutes via I-70 by car. The light rail provides a car-free alternative via the A Line to Union Station.</p></div>
+        <div className="faq-item"><strong>What are the office hours?</strong><p>Tuesday through Friday 10am to 6pm, Saturday 10am to 5pm. Closed Sunday and Monday. Tours can be scheduled online.</p></div>
+      </div>
+    </>
+  )
+}
+
+function AllInPricingArticle({ operator, slug }: { operator: string; slug: string }) {
+  return (
+    <>
+      <p>
+        All-in pricing is a pricing model used by AIR Communities on brightplace where every listed apartment price includes base rent plus required monthly fees. Water, sewer, trash, pest control, and other mandatory charges are bundled into one number. No surprise line items at lease signing, no hidden fees on move-in day (as of Q3 2026).
+      </p>
+
+      <h2 id="what-is-included">What fees are included in all-in pricing?</h2>
+      <p>All-in pricing at AIR Communities properties on brightplace bundles the following into one monthly number: base rent, water and sewer charges, trash removal, pest control, valet trash pickup, and package locker access. The exact fees vary by property, but the total is always shown upfront.</p>
+      <p>At Oak Trail at Cherry Creek South, for example, a Design 1A apartment is listed at $1,512 per month all-in (as of Q3 2026). That single number includes $68 for water/sewer/trash, $5 for pest control, $35 for valet trash, and $15 for package lockers. No calculation needed.</p>
+
+      <Link href={`/${operator}/${slug}#pricing`} className="cta-inline">
+        <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(245,166,35,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bp-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </div>
+        <div>
+          <p><strong style={{ color: 'var(--bp-navy)' }}>Try the interactive rent calculator</strong></p>
+          <p style={{ color: 'var(--bp-ink-muted)', fontSize: '13px' }}>Build your real monthly cost with pet, parking, and storage add-ons</p>
+        </div>
+      </Link>
+
+      <h2 id="what-is-separate">What is NOT included?</h2>
+      <p>Electricity, gas, and internet are always billed separately by your chosen provider. These are utilities you control: your usage determines the cost, so they cannot be quoted at a fixed rate. Additionally, optional add-ons like pet rent ($35/mo typical), covered parking ($75-$150/mo), and storage units ($50/mo) are quoted separately at application.</p>
+
+      <h2 id="why-it-matters">Why does all-in pricing matter for renters?</h2>
+      <p>Most apartment communities advertise a base rent, then add $80 to $200 in mandatory monthly fees at lease signing. A $1,400 apartment becomes $1,580 after water, trash, pest control, and admin fees. This makes it nearly impossible to compare two apartments accurately from their listing prices alone.</p>
+      <p>All-in pricing solves this by including every required fee in the listed number. When Oak Trail lists $1,512/mo and Lakeview lists $1,450/mo, those numbers are directly comparable. No math, no guessing, no surprises.</p>
+
+      <h2 id="how-to-compare">How to compare apartments using all-in pricing</h2>
+      <p>When comparing an all-in price from brightplace to a traditional listing, add the traditional listing's mandatory fees to its base rent. A competitor listing "$1,350/mo" with $120 in required fees is actually $1,470/mo. Compare that to the brightplace all-in number directly.</p>
+
+      <div className="data-card">
+        <h4>Example: all-in vs traditional pricing</h4>
+        <div className="data-row"><span>Traditional listing: advertised rent</span><span>$1,350</span></div>
+        <div className="data-row"><span>+ Water/sewer/trash</span><span>$68</span></div>
+        <div className="data-row"><span>+ Pest control</span><span>$5</span></div>
+        <div className="data-row"><span>+ Valet trash</span><span>$35</span></div>
+        <div className="data-row"><span>+ Package lockers</span><span>$15</span></div>
+        <div className="data-row"><span><strong>Actual monthly cost</strong></span><span><strong>$1,473</strong></span></div>
+      </div>
+      <p>The brightplace listing for the same apartment would simply show $1,473/mo. One number. Done.</p>
+
+      <h2 id="which-properties">Which AIR Communities properties use all-in pricing?</h2>
+      <p>All AIR Communities properties listed on brightplace use all-in pricing. Current properties include Oak Trail at Cherry Creek South (Denver) and Lakeview at Gateway Park (Denver), with more communities being added.</p>
+
+      <div className="faq-section">
+        <h2 id="faq">Frequently asked questions about all-in pricing</h2>
+        <div className="faq-item"><strong>What is all-in pricing?</strong><p>All-in pricing includes base rent plus all required monthly fees (water, sewer, trash, pest control, etc.) in one number. The listed price is the price you pay.</p></div>
+        <div className="faq-item"><strong>What is NOT included in all-in pricing?</strong><p>Electricity, gas, and internet are billed separately by your provider. Optional add-ons (pet rent, parking, storage) are quoted at application.</p></div>
+        <div className="faq-item"><strong>How do I compare all-in pricing to regular listings?</strong><p>Add the traditional listing's mandatory fees to its base rent. Compare that total to the brightplace all-in number directly.</p></div>
+        <div className="faq-item"><strong>Do all AIR Communities properties use all-in pricing?</strong><p>All AIR Communities properties on brightplace use all-in pricing. The exact fees bundled vary by property but the total is always displayed upfront.</p></div>
+        <div className="faq-item"><strong>Can I customize my all-in price?</strong><p>Yes. Each property page on brightplace has an interactive rent calculator. Select your floor plan, toggle pet rent, parking, and storage to see your personalized monthly total.</p></div>
       </div>
     </>
   )
