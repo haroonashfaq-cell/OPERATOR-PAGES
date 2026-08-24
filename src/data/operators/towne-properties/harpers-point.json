@@ -8,7 +8,7 @@
   "zip": "45249",
   "phone": "(844) 326-8952",
   "email": "harperspoint@towneproperties.com",
-  "heroImage": "/images/towne-properties/hero-pool.jpg",
+  "heroImage": "/images/towne-properties/harpers-hero.jpg",
   "heroAlt": "Harpers Point resort-style swimming pool with sundeck and lush landscaping",
   "heroHeadline": "A peaceful retreat in resort-style Cincinnati living",
   "heroDescription": "Single-level apartments and two-story townhomes with white sand beach, full-service pub, and award-winning landscaping. Lush waterscapes and tranquil settings just 20 minutes from downtown Cincinnati.",
@@ -52,16 +52,16 @@
     { "title": "Tennis and basketball courts", "description": "Outdoor courts for recreation and friendly competition" },
     { "title": "Award-winning landscaping", "description": "Scenic waterscapes and lush grounds throughout the community" }
   ],
-  "amenityImage": "/images/towne-properties/pool.jpg",
+  "amenityImage": "/images/towne-properties/harpers-pool.jpg",
   "amenityImageAlt": "Resort-style swimming pool at Harpers Point with sundeck and landscaping",
   "neighborhoodHeadline": "Everything you need, steps away",
   "neighborhoodDescription": "Harpers Point sits in the Sixteen Mile Stand area of Cincinnati, surrounded by dining, shopping, and entertainment. Three shopping centers are within a 7-minute walk, including Shops at Harper's Point. Regal Deerfield Town Center is nearby for movies. Five parks within 10 miles, and I-275 access puts downtown Cincinnati just 20 minutes away.",
-  "neighborhoodImage": "/images/towne-properties/cincinnati.jpg",
+  "neighborhoodImage": "/images/towne-properties/harpers-cincinnati.jpg",
   "neighborhoodImageAlt": "Cincinnati skyline at sunset over the Ohio River",
   "galleryImages": [
-    { "src": "/images/towne-properties/hero-pool.jpg", "alt": "Resort-style pool with sundeck", "caption": "Resort-style swimming pool" },
-    { "src": "/images/towne-properties/pool.jpg", "alt": "Pool area with lounge chairs", "caption": "Poolside relaxation" },
-    { "src": "/images/towne-properties/cincinnati.jpg", "alt": "Cincinnati skyline", "caption": "20 minutes to downtown Cincinnati" }
+    { "src": "/images/towne-properties/harpers-hero.jpg", "alt": "Resort-style pool with sundeck", "caption": "Resort-style swimming pool" },
+    { "src": "/images/towne-properties/harpers-pool.jpg", "alt": "Pool area with lounge chairs", "caption": "Poolside relaxation" },
+    { "src": "/images/towne-properties/harpers-cincinnati.jpg", "alt": "Cincinnati skyline", "caption": "20 minutes to downtown Cincinnati" }
   ],
   "faqs": [
     { "question": "What floor plans does Harpers Point offer?", "answer": "Harpers Point offers 8 floor plans including one-bedroom apartments (696-826 sq ft), two-bedroom apartments and townhomes (848-1,405 sq ft), and three-bedroom townhomes (1,405-1,445 sq ft). Prices range from $1,285 to $2,601 per month (as of Q3 2026)." },

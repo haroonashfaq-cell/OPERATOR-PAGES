@@ -8,7 +8,7 @@
   "zip": "80239",
   "phone": "(983) 200-7494",
   "email": "leasing@lakeviewgatewaypark.com",
-  "heroImage": "/images/air-communities/hero-pool.jpg",
+  "heroImage": "/images/air-communities/lakeview-hero.jpg",
   "heroAlt": "Resort-style pool with cabanas at Lakeview at Gateway Park in Denver",
   "heroHeadline": "Lakeside apartments near Denver International Airport",
   "heroDescription": "One, two, and three bedroom apartments with community lake, resort pool with cabanas, heated spa, and on-site dog park. Steps from the 40th Ave light rail station.",
@@ -54,17 +54,17 @@
     { "title": "Outdoor kitchen", "description": "Grilling stations and outdoor dining areas" },
     { "title": "Business center", "description": "Wi-Fi equipped workspace for remote professionals" }
   ],
-  "amenityImage": "/images/air-communities/fitness.jpg",
+  "amenityImage": "/images/air-communities/lakeview-fitness.jpg",
   "amenityImageAlt": "24-hour fitness center with yoga studio at Lakeview at Gateway Park",
   "neighborhoodHeadline": "Connected to everything Denver offers",
   "neighborhoodDescription": "Lakeview at Gateway Park is steps from the 40th Ave and Airport Blvd light rail station, connecting you to downtown Denver and DIA without a car. The Shops at Northfield offer dining, retail, and entertainment five minutes away. Denver International Airport is 15 minutes east. I-70 access puts downtown Denver 20 minutes away.",
   "neighborhoodImage": "/images/air-communities/denver-skyline.jpg",
   "neighborhoodImageAlt": "Denver skyline with mountains in the background",
   "galleryImages": [
-    { "src": "/images/air-communities/hero-pool.jpg", "alt": "Resort pool with cabanas", "caption": "Resort-style pool with private cabanas" },
-    { "src": "/images/air-communities/kitchen.jpg", "alt": "Modern kitchen with granite", "caption": "Granite countertops and subway tile backsplash" },
-    { "src": "/images/air-communities/living-room.jpg", "alt": "Living room with fireplace", "caption": "Wood-style flooring and select fireplaces" },
-    { "src": "/images/air-communities/dog-park.jpg", "alt": "Leash-free bark park", "caption": "Dedicated off-leash bark park" },
+    { "src": "/images/air-communities/lakeview-hero.jpg", "alt": "Resort pool with cabanas", "caption": "Resort-style pool with private cabanas" },
+    { "src": "/images/air-communities/lakeview-kitchen.jpg", "alt": "Modern kitchen with granite", "caption": "Granite countertops and subway tile backsplash" },
+    { "src": "/images/air-communities/lakeview-living.jpg", "alt": "Living room with fireplace", "caption": "Wood-style flooring and select fireplaces" },
+    { "src": "/images/air-communities/lakeview-pool.jpg", "alt": "Leash-free bark park", "caption": "Dedicated off-leash bark park" },
     { "src": "/images/air-communities/denver-skyline.jpg", "alt": "Denver skyline", "caption": "20 minutes from downtown Denver" }
   ],
   "faqs": [

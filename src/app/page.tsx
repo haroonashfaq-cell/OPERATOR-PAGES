@@ -31,7 +31,7 @@ const OPERATORS = [
       name: 'Harpers Point',
       subtitle: 'Resort-Style Living',
       city: 'Cincinnati, OH',
-      image: '/images/towne-properties/hero-pool.jpg',
+      image: '/images/towne-properties/harpers-hero.jpg',
       price: 1285,
       plans: 8,
       highlight: 'White sand beach & pub',
