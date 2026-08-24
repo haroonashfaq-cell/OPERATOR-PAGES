@@ -163,7 +163,7 @@ function HarpersPointArticle({ operator, slug }: { operator: string; slug: strin
       <h2 id="apartment-features">What apartment features are included?</h2>
       <p>Every apartment includes central air conditioning, stainless-steel appliances, granite countertops, and spacious walk-in closets. In-unit washer and dryer hookups are standard. Select units feature vaulted ceilings, wood-burning fireplaces, and private balconies or patios with water views.</p>
       <div className="image-block">
-        <div style={{ width: '100%', aspectRatio: '16/9', background: `url(/images/towne-properties/pool.jpg) center / cover no-repeat`, borderRadius: 'var(--r-md)' }} role="img" aria-label="Harpers Point resort-style swimming pool" />
+        <div style={{ width: '100%', aspectRatio: '16/9', background: `url(/images/towne-properties/harpers-pool.jpg) center / cover no-repeat`, borderRadius: 'var(--r-md)' }} role="img" aria-label="Harpers Point resort-style swimming pool" />
         <p className="image-caption">The resort-style pool at Harpers Point with sundeck</p>
       </div>
 
