@@ -338,8 +338,8 @@ export default function HomePage() {
                 }}
                 className="two-col-grid"
               >
-                {/* Property image */}
-                <Link href={`/${op.slug}/${op.featured.slug}`} style={{ display: 'block', position: 'relative', overflow: 'hidden' }}>
+                {/* Property image — links to operator page */}
+                <Link href={`/${op.slug}`} style={{ display: 'block', position: 'relative', overflow: 'hidden' }}>
                   <div style={{
                     width: '100%',
                     height: '100%',
