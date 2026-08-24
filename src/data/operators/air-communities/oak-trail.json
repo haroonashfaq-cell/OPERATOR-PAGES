@@ -59,11 +59,12 @@
   "neighborhoodImage": "/images/air-communities/denver-skyline.jpg",
   "neighborhoodImageAlt": "Denver skyline with mountains in the background",
   "galleryImages": [
-    { "src": "/images/air-communities/hero-pool.jpg", "alt": "Resort-style pool with pavilion", "caption": "Resort-style pool with timber pavilion" },
+    { "src": "/images/air-communities/hero-pool.jpg", "alt": "Resort-style pool with pavilion at Oak Trail", "caption": "Resort-style pool with timber pavilion" },
+    { "src": "/images/air-communities/oak-trail-pool.png", "alt": "Pool with pavilion and lounge chairs at Oak Trail", "caption": "Pool area with timber pavilion" },
     { "src": "/images/air-communities/kitchen.jpg", "alt": "Renovated kitchen with granite countertops", "caption": "Granite countertops and modern finishes" },
     { "src": "/images/air-communities/living-room.jpg", "alt": "Open living room with fireplace", "caption": "Spacious living areas with natural light" },
-    { "src": "/images/air-communities/dog-park.jpg", "alt": "On-site dog park for off-leash play", "caption": "On-site dog park for off-leash play" },
-    { "src": "/images/air-communities/denver-skyline.jpg", "alt": "Denver skyline view from Cherry Creek", "caption": "Minutes from downtown Denver" }
+    { "src": "/images/air-communities/oak-trail-grounds.png", "alt": "Landscaped grounds and dog park at Oak Trail", "caption": "Landscaped grounds with walking paths" },
+    { "src": "/images/air-communities/dog-park.jpg", "alt": "On-site dog park for off-leash play", "caption": "On-site dog park for off-leash play" }
   ],
   "faqs": [
     { "question": "What is the all-in pricing at Oak Trail?", "answer": "Every listed price includes base rent plus required monthly fees like water, sewer, trash, pest control, valet trash, and package lockers. There are no surprise line items at lease signing." },

@@ -62,10 +62,9 @@
   "neighborhoodImageAlt": "Denver skyline with mountains in the background",
   "galleryImages": [
     { "src": "/images/air-communities/lakeview-hero.png", "alt": "Lakeview at Gateway Park lakeside view with bridge", "caption": "Lakeside setting with walking bridge" },
-    { "src": "/images/air-communities/lakeview-pool.png", "alt": "Resort-style pool with pavilion at Lakeview", "caption": "Resort-style pool with timber pavilion" },
+    { "src": "/images/air-communities/lakeview-pool.png", "alt": "Resort pool with loungers at Lakeview", "caption": "Resort-style pool with sundeck" },
     { "src": "/images/air-communities/lakeview-clubhouse.png", "alt": "Modern clubhouse lounge at Lakeview", "caption": "Modern clubhouse with lake views" },
-    { "src": "/images/air-communities/lakeview-lounge.png", "alt": "Resident lounge with pool view", "caption": "Resident lounge overlooking the pool" },
-    { "src": "/images/air-communities/lakeview-dogpark.png", "alt": "Dog park and green space at Lakeview", "caption": "Landscaped grounds and dog park" }
+    { "src": "/images/air-communities/lakeview-lounge.png", "alt": "Resident lounge with pool view", "caption": "Resident lounge overlooking the pool" }
   ],
   "faqs": [
     { "question": "What floor plans does Lakeview at Gateway Park offer?", "answer": "Lakeview offers 8 floor plans: four one-bedroom layouts (689-832 sq ft), three two-bedroom layouts (920-1,118 sq ft), and one three-bedroom layout (1,314 sq ft). Prices range from $1,450 to $2,605 per month (as of Q3 2026)." },
