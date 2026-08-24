@@ -8,7 +8,7 @@
   "zip": "80239",
   "phone": "(983) 200-7494",
   "email": "leasing@lakeviewgatewaypark.com",
-  "heroImage": "/images/air-communities/lakeview-hero.jpg",
+  "heroImage": "/images/air-communities/lakeview-hero.png",
   "heroAlt": "Resort-style pool with cabanas at Lakeview at Gateway Park in Denver",
   "heroHeadline": "Lakeside apartments near Denver International Airport",
   "heroDescription": "One, two, and three bedroom apartments with community lake, resort pool with cabanas, heated spa, and on-site dog park. Steps from the 40th Ave light rail station.",
@@ -54,18 +54,18 @@
     { "title": "Outdoor kitchen", "description": "Grilling stations and outdoor dining areas" },
     { "title": "Business center", "description": "Wi-Fi equipped workspace for remote professionals" }
   ],
-  "amenityImage": "/images/air-communities/lakeview-fitness.jpg",
+  "amenityImage": "/images/air-communities/lakeview-clubhouse.png",
   "amenityImageAlt": "24-hour fitness center with yoga studio at Lakeview at Gateway Park",
   "neighborhoodHeadline": "Connected to everything Denver offers",
   "neighborhoodDescription": "Lakeview at Gateway Park is steps from the 40th Ave and Airport Blvd light rail station, connecting you to downtown Denver and DIA without a car. The Shops at Northfield offer dining, retail, and entertainment five minutes away. Denver International Airport is 15 minutes east. I-70 access puts downtown Denver 20 minutes away.",
   "neighborhoodImage": "/images/air-communities/denver-skyline.jpg",
   "neighborhoodImageAlt": "Denver skyline with mountains in the background",
   "galleryImages": [
-    { "src": "/images/air-communities/lakeview-hero.jpg", "alt": "Resort pool with cabanas", "caption": "Resort-style pool with private cabanas" },
-    { "src": "/images/air-communities/lakeview-kitchen.jpg", "alt": "Modern kitchen with granite", "caption": "Granite countertops and subway tile backsplash" },
-    { "src": "/images/air-communities/lakeview-living.jpg", "alt": "Living room with fireplace", "caption": "Wood-style flooring and select fireplaces" },
-    { "src": "/images/air-communities/lakeview-pool.jpg", "alt": "Leash-free bark park", "caption": "Dedicated off-leash bark park" },
-    { "src": "/images/air-communities/denver-skyline.jpg", "alt": "Denver skyline", "caption": "20 minutes from downtown Denver" }
+    { "src": "/images/air-communities/lakeview-hero.png", "alt": "Lakeview at Gateway Park lakeside view with bridge", "caption": "Lakeside setting with walking bridge" },
+    { "src": "/images/air-communities/lakeview-pool.png", "alt": "Resort-style pool with pavilion at Lakeview", "caption": "Resort-style pool with timber pavilion" },
+    { "src": "/images/air-communities/lakeview-clubhouse.png", "alt": "Modern clubhouse lounge at Lakeview", "caption": "Modern clubhouse with lake views" },
+    { "src": "/images/air-communities/lakeview-lounge.png", "alt": "Resident lounge with pool view", "caption": "Resident lounge overlooking the pool" },
+    { "src": "/images/air-communities/lakeview-dogpark.png", "alt": "Dog park and green space at Lakeview", "caption": "Landscaped grounds and dog park" }
   ],
   "faqs": [
     { "question": "What floor plans does Lakeview at Gateway Park offer?", "answer": "Lakeview offers 8 floor plans: four one-bedroom layouts (689-832 sq ft), three two-bedroom layouts (920-1,118 sq ft), and one three-bedroom layout (1,314 sq ft). Prices range from $1,450 to $2,605 per month (as of Q3 2026)." },
