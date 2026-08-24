@@ -10,6 +10,7 @@ export interface StoryData {
   readTime: string
   datePublished: string
   dateModified: string
+  thumbnail?: string
   content: (props: { operator: string; slug: string }) => React.ReactNode
 }
 
@@ -39,6 +40,7 @@ const allStories: Record<string, StoryData[]> = {
       readTime: '7 min',
       datePublished: '2026-08-23',
       dateModified: '2026-08-24',
+      thumbnail: '/images/air-communities/story-cherry-creek.jpg',
       content: OakTrailArticle,
     },
     {
@@ -51,6 +53,7 @@ const allStories: Record<string, StoryData[]> = {
       readTime: '6 min',
       datePublished: '2026-08-24',
       dateModified: '2026-08-24',
+      thumbnail: '/images/air-communities/story-lakeview.jpg',
       content: LakeviewArticle,
     },
     {
@@ -63,6 +66,7 @@ const allStories: Record<string, StoryData[]> = {
       readTime: '5 min',
       datePublished: '2026-08-24',
       dateModified: '2026-08-24',
+      thumbnail: '/images/air-communities/story-pricing.jpg',
       content: AllInPricingArticle,
     },
   ],

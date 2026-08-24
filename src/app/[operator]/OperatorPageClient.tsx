@@ -13,6 +13,7 @@ interface SerializedStory {
   metaDescription: string
   primaryKeyword: string
   readTime: string
+  thumbnail?: string
   datePublished: string
   dateModified: string
 }
@@ -287,7 +288,7 @@ export default function OperatorPageClient({ operator, meta, properties, stories
                       border: '1px solid var(--bp-line)', overflow: 'hidden',
                       textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.3s, transform 0.3s',
                     }}>
-                      <div style={{ height: 180, background: `url(${prop?.heroImage || ''}) center / cover no-repeat`, position: 'relative' }}>
+                      <div style={{ height: 180, background: `url(${story.thumbnail || prop?.heroImage || ''}) center / cover no-repeat`, position: 'relative' }}>
                         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 60, background: 'linear-gradient(to top, rgba(0,0,0,0.4), transparent)' }} />
                         {prop && (
                           <span style={{
